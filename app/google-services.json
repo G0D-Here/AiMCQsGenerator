@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "496433156199",
+    "project_id": "mcqs-generator-dbd98",
+    "storage_bucket": "mcqs-generator-dbd98.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496433156199:android:34d8a6a7900a2e4c9884c2",
+        "android_client_info": {
+          "package_name": "com.example.aivideonote"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4SBsjEapGVK7uqL7QofR6e_v8gfxBj3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
