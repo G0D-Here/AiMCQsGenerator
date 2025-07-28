@@ -107,7 +107,7 @@ fun MainScreen(
     var score by remember { mutableIntStateOf(0) }
     var text by remember { mutableStateOf("Do You Know?\uD83E\uDD28") }
     var showDifficulty by remember { mutableStateOf(false) }
-    var langClicked by remember { mutableStateOf(false) }
+    var langClicked by remember { mutableStateOf(true) }
     var lang by remember { mutableStateOf("English") }
     var profileCard by remember { mutableStateOf(false) }
 
@@ -280,7 +280,7 @@ fun MainScreen(
         }
 
         AnimatedVisibility(
-            visible = searchBarVisible,
+            visible = searchBarVisible && !viewModel.camera,
             modifier = Modifier
 //                .padding(2.dp)
                 .fillMaxWidth()
@@ -523,7 +523,7 @@ fun LevelButton(
             .border(1.dp, color, RoundedCornerShape(22.dp))
             .clickable(
                 interactionSource = interactionSource,
-                indication = null, // 👈 disables ripple
+                indication = null,
                 onClick = { onClick(text) }
             )
             .padding(vertical = 8.dp, horizontal = 16.dp),

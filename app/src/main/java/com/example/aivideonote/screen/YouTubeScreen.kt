@@ -19,12 +19,14 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -94,22 +96,32 @@ fun CameraScreen(
                     .fillMaxWidth()
                     .height(100.dp)
             )
-            Box(
+            Row(
                 Modifier
-                    .align(Alignment.Center)
-                    .border(1.dp, Color.Green)
-            )
-            Button(
-                onClick = {
-                    text(extractedText)
-                    viewModel.camera = false
-                },
-                modifier = Modifier
                     .align(Alignment.BottomCenter)
-                    .padding(60.dp)
             ) {
-                Text("Click")
+                OutlinedButton(
+                    onClick = {
+                        text(extractedText)
+                        viewModel.camera = false
+                    },
+                    modifier = Modifier
+                        .padding(6.dp)
+                ) {
+                    Text("Click", color = Color.White)
+                }
+
+                OutlinedButton(
+                    onClick = {
+                        viewModel.camera = false
+                    },
+                    modifier = Modifier
+                        .padding(6.dp)
+                ) {
+                    Text("Back", color = Color.White)
+                }
             }
+
         }
 }
 

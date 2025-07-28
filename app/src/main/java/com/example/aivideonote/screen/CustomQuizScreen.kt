@@ -1,7 +1,6 @@
 package com.example.aivideonote.screen
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
@@ -15,7 +14,11 @@ import com.example.aivideonote.screen.auth.AuthViewModel
 
 @Composable
 fun CustomQuizScreen(authViewModel: AuthViewModel = hiltViewModel(), navController: NavController) {
-    Column (Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+    Column(
+        Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
         Text("Yes, it is working")
         Button(
             onClick = { authViewModel.addMCQs("Jai Shree Ram") }
